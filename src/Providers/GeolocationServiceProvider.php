@@ -9,25 +9,49 @@ class GeolocationServiceProvider extends ServiceProvider
     public function boot()
     {
         // Load routes
-        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
+        if (file_exists(__DIR__ . '/../routes/api.php')) {
+            $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
+        }
 
         // Load migrations
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        if (is_dir(__DIR__ . '/../database/migrations')) {
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        }
 
         // Publish configuration
-        $this->publishes([
-            __DIR__ . '/../config/geolocation.php' => config_path('geolocation.php'),
-        ], 'config');
+        if (file_exists(__DIR__ . '/../config/geolocation.php')) {
+            $this->publishes([
+                __DIR__ . '/../config/geolocation.php' => config_path('geolocation.php'),
+            ], 'config');
+        }
 
         // Publish controllers
-        $this->publishes([
-            __DIR__ . '/../Controllers' => app_path('Http/Controllers/ModulePlaces'),
-        ], 'controllers');
+        if (is_dir(__DIR__ . '/../Controllers')) {
+            $this->publishes([
+                __DIR__ . '/../Controllers' => app_path('Http/Controllers/ModulePlaces'),
+            ], 'controllers');
+        }
 
         // Publish models
-        $this->publishes([
-            __DIR__ . '/../Models' => app_path('Models/ModulePlaces'),
-        ], 'models');
+        if (is_dir(__DIR__ . '/../Models')) {
+            $this->publishes([
+                __DIR__ . '/../Models' => app_path('Models/ModulePlaces'),
+            ], 'models');
+        }
+
+        // Publish migrations
+        if (is_dir(__DIR__ . '/../database/migrations')) {
+            $this->publishes([
+                __DIR__ . '/../database/migrations' => database_path('migrations'),
+            ], 'migrations');
+        }
+
+        // Publish routes
+        if (file_exists(__DIR__ . '/../routes/api.php')) {
+            $this->publishes([
+                __DIR__ . '/../routes/api.php' => base_path('routes/api_module_places.php'),
+            ], 'routes');
+        }
     }
 
     public function register()
