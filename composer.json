@@ -1,5 +1,5 @@
 {
-    "name": "module-places/laravel-location-crud",
+    "name": "module-geolocation/laravel-location-crud",
     "description": "CRUD de geolocalização para Laravel (Países, Estados, Cidades e Bairros)",
     "type": "library",
     "license": "MIT",
