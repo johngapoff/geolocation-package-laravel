@@ -28,14 +28,14 @@ class GeolocationServiceProvider extends ServiceProvider
         // Publish controllers
         if (is_dir(__DIR__ . '/../Controllers')) {
             $this->publishes([
-                __DIR__ . '/../Controllers' => app_path('Http/Controllers/GeolocationsApi'),
+                __DIR__ . '/../Controllers' => app_path('Http/Controllers/'),
             ], 'controllers');
         }
 
         // Publish models
         if (is_dir(__DIR__ . '/../Models')) {
             $this->publishes([
-                __DIR__ . '/../Models' => app_path('Models/Geolocations'),
+                __DIR__ . '/../Models' => app_path('Models/'),
             ], 'models');
         }
 
