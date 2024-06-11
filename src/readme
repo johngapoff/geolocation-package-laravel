@@ -1,0 +1,2 @@
+Commands for public packages
+php artisan vendor:publish --provider="Geolocation\GeolocationCrud\Providers\GeolocationServiceProvider"
