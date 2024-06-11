@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\PlacesApi;
+namespace App\Http\Controllers\GeolocationsApi;
 
 use App\Http\Controllers\Controller;
-use App\Models\Places\Country;
+use ModulePlaces\GeolocationCrud\Models\Geolocations\Country;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller

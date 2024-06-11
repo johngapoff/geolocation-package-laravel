@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Places;
+namespace ModulePlaces\GeolocationCrud\Models\Geolocations;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulePlaces\GeolocationCrud\Providers;
+namespace Geolocation\GeolocationCrud\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -28,14 +28,14 @@ class GeolocationServiceProvider extends ServiceProvider
         // Publish controllers
         if (is_dir(__DIR__ . '/../Controllers')) {
             $this->publishes([
-                __DIR__ . '/../Controllers' => app_path('Http/Controllers/ModulePlaces'),
+                __DIR__ . '/../Controllers' => app_path('Http/Controllers/GeolocationsApi'),
             ], 'controllers');
         }
 
         // Publish models
         if (is_dir(__DIR__ . '/../Models')) {
             $this->publishes([
-                __DIR__ . '/../Models' => app_path('Models/ModulePlaces'),
+                __DIR__ . '/../Models' => app_path('Models/Geolocations'),
             ], 'models');
         }
 
@@ -49,7 +49,7 @@ class GeolocationServiceProvider extends ServiceProvider
         // Publish routes
         if (file_exists(__DIR__ . '/../routes/api.php')) {
             $this->publishes([
-                __DIR__ . '/../routes/api.php' => base_path('routes/api_module_places.php'),
+                __DIR__ . '/../routes/api.php' => base_path('routes/api.php'),
             ], 'routes');
         }
     }

@@ -1,5 +1,5 @@
 {
-    "name": "module-geolocation/laravel-location-crud",
+    "name": "geolocation/laravel-geolocation-crud",
     "description": "CRUD de geolocalização para Laravel (Países, Estados, Cidades e Bairros)",
     "type": "library",
     "license": "MIT",
@@ -15,14 +15,15 @@
     },
     "autoload": {
         "psr-4": {
-            "ModulePlaces\\GeolocationCrud\\": "src/"
+            "Geolocation\\GeolocationCrud\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ModulePlaces\\GeolocationCrud\\Providers\\GeolocationServiceProvider"
+                "Geolocation\\GeolocationCrud\\Providers\\GeolocationServiceProvider"
             ]
         }
     }
+
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\PlacesApi;
+namespace App\Http\Controllers\GeolocationsApi;
 
 use App\Http\Controllers\Controller;
-use App\Models\Places\City;
-use App\Models\Places\District;
+use ModulePlaces\GeolocationCrud\Models\Geolocations\City;
+use ModulePlaces\GeolocationCrud\Models\Geolocations\District;
 use Illuminate\Http\Request;
 
 class DistrictController extends Controller

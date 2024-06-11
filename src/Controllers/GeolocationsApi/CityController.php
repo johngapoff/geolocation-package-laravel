@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\PlacesApi;
+namespace App\Http\Controllers\GeolocationsApi;
 
 use App\Http\Controllers\Controller;
-use App\Models\Places\City;
+use ModulePlaces\GeolocationCrud\Models\Geolocations\City;
 use Illuminate\Http\Request;
 
 class CityController extends Controller
