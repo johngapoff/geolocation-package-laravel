@@ -1,2 +1,16 @@
 Commands for public packages
 php artisan vendor:publish --provider="Geolocation\GeolocationCrud\Providers\GeolocationServiceProvider"
+
+{
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "geolocation/laravel-geolocation-crud": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/usuario/repo.git"
+        }
+    ]
+}
