@@ -10,7 +10,7 @@ php artisan vendor:publish --provider="Geolocation\GeolocationCrud\Providers\Geo
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/usuario/repo.git"
+            "url": "https://github.com/johngapoff/geolocation-package-laravel.git"
         }
     ]
 }
