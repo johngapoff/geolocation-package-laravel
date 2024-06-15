@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\GeolocationsApi;
 
 use App\Http\Controllers\Controller;
-use ModulePlaces\GeolocationCrud\Models\Geolocations\City;
-use ModulePlaces\GeolocationCrud\Models\Geolocations\District;
+use App\Models\Geolocations\District;
 use Illuminate\Http\Request;
 
 class DistrictController extends Controller

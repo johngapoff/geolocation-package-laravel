@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\GeolocationsApi;
 
 use App\Http\Controllers\Controller;
-use ModulePlaces\GeolocationCrud\Models\Geolocations\Country;
+use App\Models\Geolocations\Country;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller

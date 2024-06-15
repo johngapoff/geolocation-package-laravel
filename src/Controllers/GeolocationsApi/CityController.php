@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\GeolocationsApi;
 
 use App\Http\Controllers\Controller;
-use ModulePlaces\GeolocationCrud\Models\Geolocations\City;
+use App\Models\Geolocations\City;
 use Illuminate\Http\Request;
 
 class CityController extends Controller
